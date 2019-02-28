@@ -32,7 +32,9 @@ export default class App extends Component<Props> {
   }
 
   componentDidMount(){
-    fetch('http://dropcode.com.br/apis/react-native/InstaluraMobile/posts.php')
+    // fetch('http://dropcode.com.br/apis/react-native/InstaluraMobile/posts.php')
+  fetch('https://instalura-api.herokuapp.com/api/public/fotos/alots')
+    
     .then(resposta => resposta.json())
     .then(json =>this.setState({
       fotos: json
